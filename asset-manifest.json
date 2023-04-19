@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/JeffLi117/cv-hooks/static/css/main.76b08b19.css",
-    "main.js": "/JeffLi117/cv-hooks/static/js/main.38fed3bb.js",
+    "main.css": "/JeffLi117/cv-hooks/static/css/main.51e3c1ce.css",
+    "main.js": "/JeffLi117/cv-hooks/static/js/main.b714039f.js",
+    "static/media/background.jpg": "/JeffLi117/cv-hooks/static/media/background.3d6dfae8bbf314c6eb7a.jpg",
+    "static/media/cheesus.jpg": "/JeffLi117/cv-hooks/static/media/cheesus.fddb195f358df21f3eea.jpg",
+    "static/media/pray.jpg": "/JeffLi117/cv-hooks/static/media/pray.0a8f76644a6241eec300.jpg",
     "index.html": "/JeffLi117/cv-hooks/index.html",
-    "main.76b08b19.css.map": "/JeffLi117/cv-hooks/static/css/main.76b08b19.css.map",
-    "main.38fed3bb.js.map": "/JeffLi117/cv-hooks/static/js/main.38fed3bb.js.map"
+    "main.51e3c1ce.css.map": "/JeffLi117/cv-hooks/static/css/main.51e3c1ce.css.map",
+    "main.b714039f.js.map": "/JeffLi117/cv-hooks/static/js/main.b714039f.js.map"
   },
   "entrypoints": [
-    "static/css/main.76b08b19.css",
-    "static/js/main.38fed3bb.js"
+    "static/css/main.51e3c1ce.css",
+    "static/js/main.b714039f.js"
   ]
 }

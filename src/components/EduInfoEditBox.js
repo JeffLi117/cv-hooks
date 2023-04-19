@@ -1,56 +1,56 @@
 import React from 'react';
 
-function EduInfoEditBox({school, setSchool, degree, setDegree, major, setMajor, GPA, setGPA, startDate, setStartDate, endDate, setEndDate}) {
+function EduInfoEditBox({eachSchool, eachDegree, eachMajor, eachGPA, eachStartDate, eachEndDate, closestHandleSchoolChange, closestHandleDegreeChange, closestHandleMajorChange, closestHandleGPAChange, closestHandleStartChange, closestHandleEndChange}) {
 
     function handleSchoolChange(e) {
-        setSchool(e.target.value);
+        closestHandleSchoolChange(e.target.value);
     }
     function handleDegreeChange(e) {
-        setDegree(e.target.value);
+        closestHandleDegreeChange(e.target.value);
     }
     function handleMajorChange(e) {
-        setMajor(e.target.value);
+        closestHandleMajorChange(e.target.value);
     }
     function handleGPAChange(e) {
-        setGPA(e.target.value);
+        closestHandleGPAChange(e.target.value);
     }
     function handleStartChange(e) {
-        setStartDate(e.target.value);
+        closestHandleStartChange(e.target.value);
     }
     function handleEndChange(e) {
-        setEndDate(e.target.value);
+        closestHandleEndChange(e.target.value);
     }
 
   return (
     <div className="editEduInfo">
             <div className="edit title">School</div>
             <input
-                value={school}
+                value={eachSchool}
                 onChange={handleSchoolChange} 
             />
             <div className="edit title">Degree</div>
             <input
-                value={degree}
+                value={eachDegree}
                 onChange={handleDegreeChange} 
             />
             <div className="edit title">Major</div>
             <input
-                value={major}
+                value={eachMajor}
                 onChange={handleMajorChange} 
             />
             <div className="edit title">GPA</div>
             <input
-                value={GPA}
+                value={eachGPA}
                 onChange={handleGPAChange} 
             />
             <div className="edit title">Start Date</div>
             <input
-                value={startDate}
+                value={eachStartDate}
                 onChange={handleStartChange} 
             />
             <div className="edit title">End Date</div>
             <input
-                value={endDate}
+                value={eachEndDate}
                 onChange={handleEndChange} 
             />
         </div>

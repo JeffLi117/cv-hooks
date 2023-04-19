@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit } from '@fortawesome/free-solid-svg-icons';
-import EduInfoEditBox from './EduInfoEditBox';
+import JobInfoEditBox from './JobInfoEditBox';
 
-function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInfo}) {
+function EachJob({ID, comp, title, tasks, startDate, endDate, saveJobInfo}) {
 
-    const [eachSchool, setEachSchool] = useState(school);    
-    const [eachDegree, setEachDegree] = useState(degree);   
-    const [eachMajor, setEachMajor] = useState(major) 
-    const [eachGPA, setEachGPA] = useState(GPA);  ;  
+    const [eachComp, setEachComp] = useState(comp);    
+    const [eachTitle, setEachTitle] = useState(title);   
+    const [eachTasks, setEachTasks] = useState(tasks);
     const [eachStartDate, setEachStartDate] = useState(startDate);  
     const [eachEndDate, setEachEndDate] = useState(endDate);  
 
@@ -18,28 +17,24 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
         if (editShowing) {
             let returnedObj = {
                 ID: ID, 
-                school: eachSchool, 
-                degree: eachDegree, 
-                major: eachMajor, 
-                GPA: eachGPA, 
+                comp: eachComp, 
+                title: eachTitle, 
+                tasks: eachTasks, 
                 startDate: eachStartDate, 
                 endDate: eachEndDate,
             }
-            saveEduInfo(returnedObj);
+            saveJobInfo(returnedObj);
         }
     }
 
-    function closestHandleSchoolChange(e) {
-        setEachSchool(e);
+    function closestHandleCompChange(e) {
+        setEachComp(e);
     }
-    function closestHandleDegreeChange(e) {
-        setEachDegree(e);
+    function closestHandleTitleChange(e) {
+        setEachTitle(e);
     }
-    function closestHandleMajorChange(e) {
-        setEachMajor(e);
-    }
-    function closestHandleGPAChange(e) {
-        setEachGPA(e);
+    function closestHandleTasksChange(e) {
+        setEachTasks(e);
     }
     function closestHandleStartChange(e) {
         setEachStartDate(e);
@@ -53,10 +48,11 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
             <div key={ID} className="eachEduHolder general">
                 <div className="eduLeft">
                     <li className="eduList">
-                        <div className="main">{eachSchool}</div>
-                        <div className="submain">{eachDegree} in {eachMajor}</div>
-                        <div>GPA: {eachGPA}</div>
+                        <div className="main">{eachComp}</div>
+                        <div className="submain">{eachTitle}</div>
                         <div>{eachStartDate} - {eachEndDate}</div>
+                        <div>Tasks: {eachTasks}</div>
+                        
                     </li>
                 </div>
                 <div className="faIconHolder">
@@ -65,11 +61,11 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
                         onClick={handleEditBoxToggle}
                     />
                 </div>
-                <EduInfoEditBox 
-                    eachSchool={eachSchool} closestHandleSchoolChange={closestHandleSchoolChange}
-                    eachDegree={eachDegree} closestHandleDegreeChange={closestHandleDegreeChange}
-                    eachMajor={eachMajor} closestHandleMajorChange={closestHandleMajorChange}
-                    eachGPA={eachGPA} closestHandleGPAChange={closestHandleGPAChange}
+                <JobInfoEditBox 
+                    eachComp={eachComp} 
+                    closestHandleCompChange={closestHandleCompChange}
+                    eachTitle={eachTitle} closestHandleTitleChange={closestHandleTitleChange}
+                    eachTasks={eachTasks} closestHandleTasksChange={closestHandleTasksChange}
                     eachStartDate={eachStartDate} closestHandleStartChange={closestHandleStartChange}
                     eachEndDate={eachEndDate} closestHandleEndChange={closestHandleEndChange}
                 />
@@ -81,10 +77,11 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
             <div key={ID} className="eachEduHolder general">
                 <div className="eduLeft">
                     <li className="eduList">
-                        <div className="main">{eachSchool}</div>
-                        <div className="submain">{eachDegree} in {eachMajor}</div>
-                        <div>GPA: {eachGPA}</div>
+                        <div className="main">{eachComp}</div>
+                        <div className="submain">{eachTitle}</div>
                         <div>{eachStartDate} - {eachEndDate}</div>
+                        <div>Tasks: {eachTasks}</div>
+                        
                     </li>
                 </div>
                 <div className="faIconHolder">
@@ -98,4 +95,4 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
     }
 }
 
-export default EachEdu
+export default EachJob

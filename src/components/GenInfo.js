@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit } from '@fortawesome/free-solid-svg-icons';
 import GenInfoEditBox from './GenInfoEditBox';
 
-function GenInfo() {
+function GenInfo({unclickable}) {
 
     const [userName, setUserName] = useState("Pizza Fanatic");    
     const [title, setTitle] = useState("Mr.");  
@@ -12,44 +12,65 @@ function GenInfo() {
     function handleEditBoxToggle() {
         setEditShowing(!editShowing);
     }
-    
-    if (editShowing) {
+
+    if (unclickable) {
         return (
-            <div className="general">
-                <div className="sections">GenInfo</div>
-                <div>{title} {userName}</div>
-                <div>{profile}</div>
-                <div className="faIconHolder">
-                    <FontAwesomeIcon 
-                        icon={faUserEdit}
-                        onClick={handleEditBoxToggle}
+            <div className="unclickable" >
+                <div className="sections">General</div>
+                <div className="general">                    
+                    <div className="main">{title} {userName}</div>
+                    <div>{profile}</div>
+                    <div className="faIconHolder">
+                        <FontAwesomeIcon 
+                            icon={faUserEdit}
+                            onClick={handleEditBoxToggle}
+                        />
+                    </div>
+                </div>
+            </div>
+            
+        )
+    } else if (editShowing) {
+        return (
+            <div>
+                <div className="sections">General</div>
+                <div className="general">
+                    <div className="main">{title} {userName}</div>
+                    <div>{profile}</div>
+                    <div className="faIconHolder">
+                        <FontAwesomeIcon 
+                            icon={faUserEdit}
+                            onClick={handleEditBoxToggle}
+                        />
+                    </div>
+                    <GenInfoEditBox 
+                        userName={userName}
+                        title={title}
+                        profile={profile}
+                        setUserName={setUserName}
+                        setTitle={setTitle}
+                        setProfile={setProfile}
                     />
                 </div>
-
-                <GenInfoEditBox 
-                    userName={userName}
-                    title={title}
-                    profile={profile}
-                    setUserName={setUserName}
-                    setTitle={setTitle}
-                    setProfile={setProfile}
-                />
             </div>
         )
     } else {
         return (
-            <div className="general">
-                <div className="sections">GenInfo</div>
-                <div>{title} {userName}</div>
-                <div>{profile}</div>
-                <div className="faIconHolder">
-                    <FontAwesomeIcon 
-                        icon={faUserEdit}
-                        onClick={handleEditBoxToggle}
-                    />
+            <div>
+                <div className="sections">General</div>
+                <div className="general">                    
+                    <div className="main">{title} {userName}</div>
+                    <div>{profile}</div>
+                    <div className="faIconHolder">
+                        <FontAwesomeIcon 
+                            icon={faUserEdit}
+                            onClick={handleEditBoxToggle}
+                        />
+                    </div>
                 </div>
             </div>
-          )
+            
+        )
     }
 }
 

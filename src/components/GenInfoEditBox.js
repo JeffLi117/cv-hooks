@@ -25,7 +25,7 @@ function GenInfoEditBox({ setUserName, setTitle, setProfile, userName, title, pr
                 onChange={handleTitleChange} 
             />
             <div className="edit title">Your Profile</div>
-            <input
+            <textarea rows="8" cols="24"
                 value={profile}
                 onChange={handleProfileChange} 
             />

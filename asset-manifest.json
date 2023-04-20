@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/JeffLi117/cv-hooks/static/css/main.51e3c1ce.css",
-    "main.js": "/JeffLi117/cv-hooks/static/js/main.b714039f.js",
-    "static/media/background.jpg": "/JeffLi117/cv-hooks/static/media/background.3d6dfae8bbf314c6eb7a.jpg",
-    "static/media/cheesus.jpg": "/JeffLi117/cv-hooks/static/media/cheesus.fddb195f358df21f3eea.jpg",
-    "static/media/pray.jpg": "/JeffLi117/cv-hooks/static/media/pray.0a8f76644a6241eec300.jpg",
-    "index.html": "/JeffLi117/cv-hooks/index.html",
-    "main.51e3c1ce.css.map": "/JeffLi117/cv-hooks/static/css/main.51e3c1ce.css.map",
-    "main.b714039f.js.map": "/JeffLi117/cv-hooks/static/js/main.b714039f.js.map"
+    "main.css": "/cv-hooks/static/css/main.51af0d2e.css",
+    "main.js": "/cv-hooks/static/js/main.ae562df5.js",
+    "static/media/background.jpg": "/cv-hooks/static/media/background.3d6dfae8bbf314c6eb7a.jpg",
+    "static/media/cheesus.jpg": "/cv-hooks/static/media/cheesus.fddb195f358df21f3eea.jpg",
+    "static/media/pray.jpg": "/cv-hooks/static/media/pray.0a8f76644a6241eec300.jpg",
+    "index.html": "/cv-hooks/index.html",
+    "main.51af0d2e.css.map": "/cv-hooks/static/css/main.51af0d2e.css.map",
+    "main.ae562df5.js.map": "/cv-hooks/static/js/main.ae562df5.js.map"
   },
   "entrypoints": [
-    "static/css/main.51e3c1ce.css",
-    "static/js/main.b714039f.js"
+    "static/css/main.51af0d2e.css",
+    "static/js/main.ae562df5.js"
   ]
 }

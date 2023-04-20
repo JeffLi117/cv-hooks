@@ -52,12 +52,14 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
         return (
             <div key={ID} className="eachEduHolder general">
                 <div className="eduLeft">
-                    <li className="eduList">
-                        <div className="main">{eachSchool}</div>
-                        <div className="submain">{eachDegree} in {eachMajor}</div>
-                        <div>GPA: {eachGPA}</div>
-                        <div>{eachStartDate} - {eachEndDate}</div>
-                    </li>
+                    <EduInfoEditBox 
+                        eachSchool={eachSchool} closestHandleSchoolChange={closestHandleSchoolChange}
+                        eachDegree={eachDegree} closestHandleDegreeChange={closestHandleDegreeChange}
+                        eachMajor={eachMajor} closestHandleMajorChange={closestHandleMajorChange}
+                        eachGPA={eachGPA} closestHandleGPAChange={closestHandleGPAChange}
+                        eachStartDate={eachStartDate} closestHandleStartChange={closestHandleStartChange}
+                        eachEndDate={eachEndDate} closestHandleEndChange={closestHandleEndChange}
+                    />
                 </div>
                 <div className="faIconHolder">
                     <FontAwesomeIcon 
@@ -65,14 +67,6 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
                         onClick={handleEditBoxToggle}
                     />
                 </div>
-                <EduInfoEditBox 
-                    eachSchool={eachSchool} closestHandleSchoolChange={closestHandleSchoolChange}
-                    eachDegree={eachDegree} closestHandleDegreeChange={closestHandleDegreeChange}
-                    eachMajor={eachMajor} closestHandleMajorChange={closestHandleMajorChange}
-                    eachGPA={eachGPA} closestHandleGPAChange={closestHandleGPAChange}
-                    eachStartDate={eachStartDate} closestHandleStartChange={closestHandleStartChange}
-                    eachEndDate={eachEndDate} closestHandleEndChange={closestHandleEndChange}
-                />
             </div>
         )
 
@@ -83,8 +77,8 @@ function EachEdu({ID, school, degree, major, GPA, startDate, endDate, saveEduInf
                     <li className="eduList">
                         <div className="main">{eachSchool}</div>
                         <div className="submain">{eachDegree} in {eachMajor}</div>
-                        <div>GPA: {eachGPA}</div>
-                        <div>{eachStartDate} - {eachEndDate}</div>
+                        <div className="dates">{eachStartDate} - {eachEndDate}</div>
+                        <div className="dates">GPA: {eachGPA}</div>
                     </li>
                 </div>
                 <div className="faIconHolder">

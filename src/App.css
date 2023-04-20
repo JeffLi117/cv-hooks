@@ -50,6 +50,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
 }
 
 .unclickable {
@@ -83,7 +84,7 @@ body {
   align-items: center;
   left: 5px;
   top: 5px;
-  z-index: 13;
+  z-index: 16;
 }
 
 .iconQ {
@@ -138,17 +139,11 @@ body {
   max-width: 800px;
   box-sizing: border-box;
   border: 2px solid black;
-  padding: 1.4rem 1rem;
-  padding-bottom: 1rem;
+  padding: 0.8rem;
   background-image: url('./components/background.jpg');
   overflow:scroll;
+  overflow-y: auto;
   overflow-x: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.overall::-webkit-scrollbar {
-  display: none;
 }
 
 .notGen {
@@ -162,9 +157,15 @@ a {
 }
 
 .backgroundlay {
-  background-color: rgb(0,0,0,0.4);
+  background-color: antiquewhite;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 14;
 }
 
 .overlay {
@@ -178,7 +179,8 @@ a {
   background-color: burlywood;
   display: flex;
   min-height: 60%;
-  top: 5%;
+  max-height: 750px;
+  top: 10.5%;
   position: absolute;
   text-align: center;
   flex-direction: column;
@@ -192,7 +194,7 @@ a {
 }
 
 .qWithinQ {
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -205,6 +207,7 @@ a {
 .smallerImg {
   margin: 1.2rem;
   width: 65%;
+  max-width: 375px;
 }
 
 .imgChangeHolder {
@@ -217,7 +220,7 @@ a {
   top: 12px;
   right: 12px;
   width:55px;
-  z-index: 15;
+  z-index: 11;
 }
 
 input[type='file'] {
@@ -261,8 +264,8 @@ input[type='file'] {
 .sections {
   font-size: 1.5rem;
   font-family: 'Abril Fatface', cursive;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 0.35rem;
+  margin-top: 0.35rem;
   padding: 5px;
   width: fit-content;
   background-color:rgb(255, 226, 189);   
@@ -281,6 +284,10 @@ input[type='file'] {
   font-size: 1.2rem;
 }
 
+.dates {
+  font-size: 1.0rem;
+}
+
 .eachEduHolder {
   position: relative;
   width: 100%;
@@ -291,10 +298,6 @@ input[type='file'] {
 }
 
 .editGenInfo, .editEduInfo {
-  border: 2px inset orangered;
-  position: absolute; 
-  top: 0px;
-  left: 0px;
   box-sizing: border-box;
   display: flex; 
   flex-direction: column;
@@ -302,8 +305,17 @@ input[type='file'] {
   align-items: center;
   width: 100%;
   padding: 0.5rem;
-  background-color:blanchedalmond ;
-  z-index: 11;
+  background-color: rgb(255, 226, 189);
+  border: 2px solid black;
+  z-index: 15;
+}
+
+.editGenInfo > div, .editEduInfo > div {
+  margin: 5px;
+}
+
+.addBtn {
+  margin: 6px;
 }
 
 .wrapper {
@@ -381,6 +393,9 @@ a:active {
   .overlay {
     top: 10.5%;
   }
+  .qWithinQ {
+    font-size: 1.35rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -389,7 +404,6 @@ a:active {
   }
   .overall {
     width: 80%;
-    padding-top: 1.2rem;
   }
   .notGen {
     display: block;
@@ -409,8 +423,8 @@ a:active {
   }
   .sections {
     font-size: 1.37rem;
-    margin-bottom: 0.3rem;
-    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
   }
   .overall {
     width: 85%;

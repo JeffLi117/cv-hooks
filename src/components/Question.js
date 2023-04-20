@@ -4,10 +4,10 @@ import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import QuestionDisplay from './QuestionDisplay';
 
-function Question({handleQuestionToggler, qShowing}) {
+function Question({questionShowToggle, qShowing}) {
   
     function handleQBoxToggle() {
-        handleQuestionToggler();
+        questionShowToggle();
     }
 
     if (qShowing) {

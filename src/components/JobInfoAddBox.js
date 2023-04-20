@@ -53,7 +53,7 @@ function JobInfoAddBox({comp, setComp, title, setTitle, tasks, setTasks, startDa
                 placeholder="End Month & End Year"
                 onChange={handleEndChange} 
             />
-            <button onClick={handleAddJobInfo}>Add Job</button>
+            <button onClick={handleAddJobInfo}  className="addBtn">Add Job</button>
         </div>
   )
 }

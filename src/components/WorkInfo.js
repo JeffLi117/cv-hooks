@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import JobInfoAddBox from './JobInfoAddBox';
 import EachJob from './EachJob';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 import uniqid from "uniqid";
 
 function WorkInfo({unclickable}) {
@@ -19,7 +20,7 @@ function WorkInfo({unclickable}) {
         endDate: "August 2020",
         ID: "randomlyID2",
     }, {
-        comp: "Gouda Vibes Only",
+        comp: "Gouda Vibes Only Inc.",
         title: "Cheese Distributor",
         tasks: "Develop automation solutions to effectively distribute cheese to people all over the globe via subscription services, regardless of distance",
         startDate: "September 2020",
@@ -113,7 +114,7 @@ function WorkInfo({unclickable}) {
                 <div className="sections">Work Experience</div>
                 <div className="iconPlus">
                     <FontAwesomeIcon 
-                        icon={faPlusSquare}
+                        icon={faSquareXmark}
                         onClick={handleEditBoxToggle}
                     />
                 </div>

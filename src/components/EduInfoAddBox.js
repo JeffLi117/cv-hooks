@@ -62,7 +62,7 @@ function EduInfoAddBox({school, setSchool, degree, setDegree, major, setMajor, G
                 placeholder="End Month & End Year"
                 onChange={handleEndChange} 
             />
-            <button onClick={handleAddEduInfo}>Add Education</button>
+            <button onClick={handleAddEduInfo} className="addBtn" >Add Education</button>
         </div>
   )
 }

@@ -47,13 +47,14 @@ function EachJob({ID, comp, title, tasks, startDate, endDate, saveJobInfo}) {
         return (
             <div key={ID} className="eachEduHolder general">
                 <div className="eduLeft">
-                    <li className="eduList">
-                        <div className="main">{eachComp}</div>
-                        <div className="submain">{eachTitle}</div>
-                        <div>{eachStartDate} - {eachEndDate}</div>
-                        <div>Tasks: {eachTasks}</div>
-                        
-                    </li>
+                    <JobInfoEditBox 
+                        eachComp={eachComp} 
+                        closestHandleCompChange={closestHandleCompChange}
+                        eachTitle={eachTitle} closestHandleTitleChange={closestHandleTitleChange}
+                        eachTasks={eachTasks} closestHandleTasksChange={closestHandleTasksChange}
+                        eachStartDate={eachStartDate} closestHandleStartChange={closestHandleStartChange}
+                        eachEndDate={eachEndDate} closestHandleEndChange={closestHandleEndChange}
+                    />
                 </div>
                 <div className="faIconHolder">
                     <FontAwesomeIcon 
@@ -61,14 +62,6 @@ function EachJob({ID, comp, title, tasks, startDate, endDate, saveJobInfo}) {
                         onClick={handleEditBoxToggle}
                     />
                 </div>
-                <JobInfoEditBox 
-                    eachComp={eachComp} 
-                    closestHandleCompChange={closestHandleCompChange}
-                    eachTitle={eachTitle} closestHandleTitleChange={closestHandleTitleChange}
-                    eachTasks={eachTasks} closestHandleTasksChange={closestHandleTasksChange}
-                    eachStartDate={eachStartDate} closestHandleStartChange={closestHandleStartChange}
-                    eachEndDate={eachEndDate} closestHandleEndChange={closestHandleEndChange}
-                />
             </div>
         )
 
@@ -79,7 +72,7 @@ function EachJob({ID, comp, title, tasks, startDate, endDate, saveJobInfo}) {
                     <li className="eduList">
                         <div className="main">{eachComp}</div>
                         <div className="submain">{eachTitle}</div>
-                        <div>{eachStartDate} - {eachEndDate}</div>
+                        <div className="dates">{eachStartDate} - {eachEndDate}</div>
                         <div>Tasks: {eachTasks}</div>
                         
                     </li>

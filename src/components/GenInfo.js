@@ -36,17 +36,7 @@ function GenInfo({unclickable}) {
         return (
             <div className="wrapper">
                 <div className="sections firstSect">General</div>
-                <ul>
-                    <div className="general eachEduHolder">                    
-                        <div className="main">{title} {userName}</div>
-                        <div>{profile}</div>
-                        <div className="faIconHolder">
-                            <FontAwesomeIcon 
-                                icon={faUserEdit}
-                                onClick={handleEditBoxToggle}
-                            />
-                        </div>
-                    </div>
+                <ul>               
                     <GenInfoEditBox 
                         userName={userName}
                         title={title}
@@ -55,6 +45,12 @@ function GenInfo({unclickable}) {
                         setTitle={setTitle}
                         setProfile={setProfile}
                     />
+                    <div className="faIconHolder">
+                        <FontAwesomeIcon 
+                            icon={faUserEdit}
+                            onClick={handleEditBoxToggle}
+                        />
+                    </div>
                 </ul>
             </div>
         )

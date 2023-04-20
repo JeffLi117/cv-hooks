@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import GenInfo from './GenInfo';
 import EduInfo from './EduInfo';
 import WorkInfo from './WorkInfo';
-import Question from './Question';
 import cheesus from './cheesus.jpg';
 
-export default function ExampleCV({questionShowToggle, qShowing}) {
+export default function ExampleCV({backgroundlay}) {
 
   const [image, setImage] = useState(cheesus)
 
@@ -15,40 +14,27 @@ export default function ExampleCV({questionShowToggle, qShowing}) {
     }
   }
 
-  /* return (
-    <div>
-      <input type="file" onChange={onImageChange} className="filetype" />
-      <img alt="preview image" src={image}/>
-    </div>
-  ) */
-
-  function handleQuestionToggler() {
-    questionShowToggle()
-  }
-
-
-  if (qShowing) {
+  if (backgroundlay) {
     return (
-      <div className="overall">
+      <div className="backgroundlay">
+        <div className="overall">
           <div className="imgChangeHolder">
             <img src={image} alt="cheesus christ" className="smallestImg" />
             <input type="file" onChange={onImageChange} className="filetype" />
           </div>
-          <Question 
-            qShowing={qShowing}
-            handleQuestionToggler={handleQuestionToggler}
-          />
-          <GenInfo unclickable="unclickable" />
+          <GenInfo />
           <div className="notGen">
             <div className="eduStuff">
-              <EduInfo unclickable="unclickable" />
+              <EduInfo />
             </div>
             <div className="workStuff">
-              <WorkInfo unclickable="unclickable" />
+              <WorkInfo />
             </div>
           </div>
       </div>
-    ) 
+      </div>
+      
+    )
   } else {
     return (
       <div className="overall">
@@ -56,10 +42,6 @@ export default function ExampleCV({questionShowToggle, qShowing}) {
             <img src={image} alt="cheesus christ" className="smallestImg" />
             <input type="file" onChange={onImageChange} className="filetype" />
           </div>
-          <Question 
-            qShowing={qShowing}
-            handleQuestionToggler={handleQuestionToggler}
-          />
           <GenInfo />
           <div className="notGen">
             <div className="eduStuff">
@@ -71,6 +53,5 @@ export default function ExampleCV({questionShowToggle, qShowing}) {
           </div>
       </div>
     )
-  }
-  
+  }  
 }

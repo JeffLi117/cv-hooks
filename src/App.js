@@ -1,6 +1,7 @@
 import './App.css';
 import ExampleCV from './components/ExampleCV';
 import React, { useState } from 'react';
+import Question from './components/Question';
 
 function App() {
 
@@ -8,22 +9,26 @@ function App() {
   function questionShowToggle() {
     setQShowing(!qShowing)
   }
-
+  
   if (qShowing) {
     return (
-      <div className="App backgroundlay">
-          <ExampleCV 
+      <div className="App">
+          <Question 
+            qShowing={qShowing}
             questionShowToggle={questionShowToggle}
-            qShowing={qShowing} 
+          />
+          <ExampleCV backgroundlay="backgroundlay"
           />
       </div>
     );
   } else {
     return (
       <div className="App">
-        <ExampleCV 
+        <Question 
+          qShowing={qShowing}
           questionShowToggle={questionShowToggle}
-          qShowing={qShowing} 
+        />
+        <ExampleCV 
         />
       </div>
     );

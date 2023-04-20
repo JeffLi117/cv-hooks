@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import EduInfoAddBox from './EduInfoAddBox';
 import EachEdu from './EachEdu';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 import uniqid from "uniqid";
 
 function EduInfo({unclickable}) {
@@ -20,6 +21,14 @@ function EduInfo({unclickable}) {
         startDate: "July 2012",
         endDate: "May 2016",
         ID: "randomlyID",
+    }, {
+        school: "University for Cheese Whizzes",
+        degree: "Master's",
+        major: "Grater Things",
+        GPA: "4.0",
+        startDate: "August 2016",
+        endDate: "May 2017",
+        ID: "randomlyID6",
     }])
 
     const [editShowing, setEditShowing] = useState(false);  
@@ -51,7 +60,6 @@ function EduInfo({unclickable}) {
         setEditShowing(!editShowing);
     }
     function saveEduInfo(obj) {
-        console.log("saving");
         let foundEdu = totalEdu.findIndex(el => el.ID === obj.ID);
         //Make a shallow copy of the items
         let totalEduCopy = [...totalEdu];
@@ -113,7 +121,7 @@ function EduInfo({unclickable}) {
                 <div className="sections">Education</div>
                 <div className="iconPlus">
                     <FontAwesomeIcon 
-                        icon={faPlusSquare}
+                        icon={faSquareXmark}
                         onClick={handleEditBoxToggle}
                     />
                 </div>

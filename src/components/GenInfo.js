@@ -15,33 +15,37 @@ function GenInfo({unclickable}) {
 
     if (unclickable) {
         return (
-            <div className="unclickable" >
+            <div className="unclickable wrapper" >
                 <div className="sections">General</div>
-                <div className="general">                    
-                    <div className="main">{title} {userName}</div>
-                    <div>{profile}</div>
-                    <div className="faIconHolder">
-                        <FontAwesomeIcon 
-                            icon={faUserEdit}
-                            onClick={handleEditBoxToggle}
-                        />
+                <ul>
+                    <div className="general eachEduHolder">                    
+                        <div className="main">{title} {userName}</div>
+                        <div>{profile}</div>
+                        <div className="faIconHolder">
+                            <FontAwesomeIcon 
+                                icon={faUserEdit}
+                                onClick={handleEditBoxToggle}
+                            />
+                        </div>
                     </div>
-                </div>
+                </ul>
             </div>
             
         )
     } else if (editShowing) {
         return (
-            <div>
-                <div className="sections">General</div>
-                <div className="general">
-                    <div className="main">{title} {userName}</div>
-                    <div>{profile}</div>
-                    <div className="faIconHolder">
-                        <FontAwesomeIcon 
-                            icon={faUserEdit}
-                            onClick={handleEditBoxToggle}
-                        />
+            <div className="wrapper">
+                <div className="sections firstSect">General</div>
+                <ul>
+                    <div className="general eachEduHolder">                    
+                        <div className="main">{title} {userName}</div>
+                        <div>{profile}</div>
+                        <div className="faIconHolder">
+                            <FontAwesomeIcon 
+                                icon={faUserEdit}
+                                onClick={handleEditBoxToggle}
+                            />
+                        </div>
                     </div>
                     <GenInfoEditBox 
                         userName={userName}
@@ -51,23 +55,25 @@ function GenInfo({unclickable}) {
                         setTitle={setTitle}
                         setProfile={setProfile}
                     />
-                </div>
+                </ul>
             </div>
         )
     } else {
         return (
-            <div>
-                <div className="sections">General</div>
-                <div className="general">                    
-                    <div className="main">{title} {userName}</div>
-                    <div>{profile}</div>
-                    <div className="faIconHolder">
-                        <FontAwesomeIcon 
-                            icon={faUserEdit}
-                            onClick={handleEditBoxToggle}
-                        />
+            <div className="wrapper">
+                <div className="sections wrapper firstSect">General</div>
+                <ul>
+                    <div className="general eachEduHolder">                    
+                        <div className="main">{title} {userName}</div>
+                        <div>{profile}</div>
+                        <div className="faIconHolder">
+                            <FontAwesomeIcon 
+                                icon={faUserEdit}
+                                onClick={handleEditBoxToggle}
+                            />
+                        </div>
                     </div>
-                </div>
+                </ul>
             </div>
             
         )

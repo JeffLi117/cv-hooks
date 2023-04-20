@@ -18,6 +18,13 @@ function WorkInfo({unclickable}) {
         startDate: "June 2017",
         endDate: "August 2020",
         ID: "randomlyID2",
+    }, {
+        comp: "Gouda Vibes Only",
+        title: "Cheese Distributor",
+        tasks: "Develop automation solutions to effectively distribute cheese to people all over the globe via subscription services, regardless of distance",
+        startDate: "September 2020",
+        endDate: "November 2022",
+        ID: "randomlyID3",
     }])
 
     const [editShowing, setEditShowing] = useState(false);  
@@ -71,7 +78,7 @@ function WorkInfo({unclickable}) {
         return( 
             <div className="wrapper unclickable">
                 <div className="sections">Work Experience</div>
-                <div className="faIconHolder iconPlus">
+                <div className="iconPlus">
                     <FontAwesomeIcon 
                         icon={faPlusSquare}
                         onClick={handleEditBoxToggle}
@@ -104,7 +111,7 @@ function WorkInfo({unclickable}) {
         return( 
             <div className="wrapper">
                 <div className="sections">Work Experience</div>
-                <div className="faIconHolder iconPlus">
+                <div className="iconPlus">
                     <FontAwesomeIcon 
                         icon={faPlusSquare}
                         onClick={handleEditBoxToggle}
@@ -146,7 +153,7 @@ function WorkInfo({unclickable}) {
         return( 
             <div className="wrapper">
                 <div className="sections">Work Experience</div>
-                <div className="faIconHolder iconPlus">
+                <div className="iconPlus">
                     <FontAwesomeIcon 
                         icon={faPlusSquare}
                         onClick={handleEditBoxToggle}

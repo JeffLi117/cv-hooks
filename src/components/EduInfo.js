@@ -75,7 +75,7 @@ function EduInfo({unclickable}) {
         return( 
             <div className="wrapper unclickable">
                 <div className="sections">Education</div>
-                <div className="faIconHolder iconPlus">
+                <div className="iconPlus">
                     <FontAwesomeIcon 
                         icon={faPlusSquare}
                         onClick={handleEditBoxToggle}
@@ -111,7 +111,7 @@ function EduInfo({unclickable}) {
         return( 
             <div className="wrapper">
                 <div className="sections">Education</div>
-                <div className="faIconHolder iconPlus">
+                <div className="iconPlus">
                     <FontAwesomeIcon 
                         icon={faPlusSquare}
                         onClick={handleEditBoxToggle}
@@ -156,7 +156,7 @@ function EduInfo({unclickable}) {
         return( 
             <div className="wrapper">
                 <div className="sections">Education</div>
-                <div className="faIconHolder iconPlus">
+                <div className="iconPlus">
                     <FontAwesomeIcon 
                         icon={faPlusSquare}
                         onClick={handleEditBoxToggle}

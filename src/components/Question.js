@@ -13,7 +13,7 @@ function Question({handleQuestionToggler, qShowing}) {
     if (qShowing) {
         return (
             <div className="questionHolder">
-                <div className="faIconHolder exitQuestion">
+                <div className="iconQ exitQuestion">
                     <FontAwesomeIcon 
                         icon={faCircleXmark}
                         onClick={handleQBoxToggle}
@@ -25,7 +25,7 @@ function Question({handleQuestionToggler, qShowing}) {
     } else {
         return (
             <div className="questionHolder">
-                <div className="faIconHolder">
+                <div className="iconQ">
                     <FontAwesomeIcon 
                         icon={faCircleQuestion}
                         onClick={handleQBoxToggle}

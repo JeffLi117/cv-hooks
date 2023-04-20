@@ -1,7 +1,7 @@
 {
   "name": "cv-hooks",
   "version": "0.1.0",
-  "homepage": "https://github.com/JeffLi117/cv-hooks",
+  "homepage": "https://JeffLi117.github.io/cv-hooks",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
